@@ -12,5 +12,5 @@ This app will be used to generate random passwords based on the user's criterias
 ## Random Password Generator 
 
 <p align="center">
-    <img src="flying_angel22\friendly-parakeet\Develop\pass gen.jpg" alt="Random Password Generator">
+    <img src="flying_angels22\Develop\pass gen.jpg" alt="Random Password Generator">
 </p>
