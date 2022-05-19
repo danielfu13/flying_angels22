@@ -1,9 +1,9 @@
 document.querySelector("#generate").addEventListener("click", writePassword);
 
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
-var alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var special = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     
 var passwordLength = "";
 var upperCase;
@@ -37,11 +37,11 @@ function generatePassword() {
     var passwordCharacters = []
     
   if (upperCase) {
-    passwordCharacters = passwordCharacters.concat(alphaUpper)
+    passwordCharacters = passwordCharacters.concat(upper)
   }
 
   if (lowerCase) {
-    passwordCharacters = passwordCharacters.concat(alphaLower)
+    passwordCharacters = passwordCharacters.concat(lower)
   } 
 
   if (numbers) {
@@ -49,7 +49,7 @@ function generatePassword() {
   }
 
   if (symbols) {
-    passwordCharacters = passwordCharacters.concat(specialChar)
+    passwordCharacters = passwordCharacters.concat(special)
   }
 
     console.log(passwordCharacters)
