@@ -1,15 +1,15 @@
-document.querySelector("#generate").addEventListener("click", writePassword);
-
-var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var special = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
-var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    
+var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var special = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];  
+
 var passwordLength = "";
 var upperCase;
 var lowerCase;
 var numbers;
 var symbols;
+
+document.querySelector("#generate").addEventListener("click", writePassword);
 
 function generatePassword() {
   var passwordLength = (prompt("How many characters would you like your password to be?"));
@@ -52,13 +52,10 @@ function generatePassword() {
     passwordCharacters = passwordCharacters.concat(special)
   }
 
-    console.log(passwordCharacters)
-
     var randomPassword = ""
       
     for (var i = 0; i < passwordLength; i++) {
       randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
-      console.log(randomPassword)
     }
     return randomPassword;
 }
